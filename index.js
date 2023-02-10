@@ -15,7 +15,6 @@ app.get("/absen", async (req, res) => {
 			"--hide-scrollbars",
 			"--disable-web-security",
 		],
-		headless: false,
 	};
 
 	try {
@@ -47,20 +46,29 @@ app.get("/absen", async (req, res) => {
 		// wait for new page to load
 		await page.waitForNavigation({ waitUntil: "load", timeout: 0 });
 
-		// click Masuk
+		// // click Masuk
 		// await page.waitForSelector("a.mantine-cih264", { timeout: 0 });
 		// await page.click("a.mantine-cih264");
 
-		// click Absen
+		// // click Absen
 		// await page.waitForSelector("button.mantine-1k5x82x", { timeout: 0 });
 		// await page.click("button.mantine-1k5x82x");
-		
-		console.log("Success Login");
+
+		let date = new Date();
+		let hour = date.getHours();
+		let minute = date.getMinutes();
+		let second = date.getSeconds();
+		let day = date.getDate();
+		let month = date.getMonth() + 1;
+		let year = date.getFullYear();
+
+		console.log(
+			`Absen Sukses Pada ${hour}:${minute}:${second} - ${day}/${month}/${year}`
+		);
 
 		res.send({
-			message: "Anjay Success",
+			message: `Absen Sukses Pada ${hour}:${minute}:${second} - ${day}/${month}/${year}`,
 		});
-
 	} catch (err) {
 		console.error(err);
 		return null;
