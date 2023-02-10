@@ -47,12 +47,12 @@ app.get("/absen", async (req, res) => {
 		await page.waitForNavigation({ waitUntil: "load", timeout: 0 });
 
 		// click Masuk
-		await page.waitForSelector("a.mantine-cih264", { timeout: 0 });
-		await page.click("a.mantine-cih264");
+		// await page.waitForSelector("a.mantine-cih264", { timeout: 0 });
+		// await page.click("a.mantine-cih264");
 
 		// click Absen
-		await page.waitForSelector("button.mantine-1k5x82x", { timeout: 0 });
-		await page.click("button.mantine-1k5x82x");
+		// await page.waitForSelector("button.mantine-1k5x82x", { timeout: 0 });
+		// await page.click("button.mantine-1k5x82x");
 
 		console.log("Success Login");
 
