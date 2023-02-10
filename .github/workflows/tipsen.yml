@@ -1,0 +1,16 @@
+name: tipsen
+on:
+  schedule:
+    - cron: '* 2,3 * * *'
+    - cron: '50 3 * * *'
+    - cron: '20 6,12 * * *'
+    
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+    - name: API req
+      run: |
+        curl -X GET "https://tipsen.up.railway.app/absen" -o data.json
+    - name: API res
+      run: cat data.json
