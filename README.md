@@ -1,7 +1,8 @@
 # Otomatisasi absen
 
+- API - [Express](https://expressjs.com/)
 - Headless Browser - [Puppeteer](https://pptr.dev/)
-- Cron Job with - [Github Actions](https://docs.github.com/en/actions)
+- Cron Job - [Github Actions](https://docs.github.com/en/actions)
 
 ## How to use
 1. Fork this repository
@@ -13,5 +14,5 @@
     PASSWORD="your_password"
     ```
 4. Commit and push to server
-5. Buat cron job di Github Actions
+5. Buat cron job di Github Actions unutuk memanggil api `/absen`
 6. Done
