@@ -14,5 +14,5 @@
     PASSWORD="your_password"
     ```
 4. Commit and push to server
-5. Buat cron job di Github Actions unutuk memanggil api `/absen`
+5. Buat cron job di Github Actions untuk memanggil api `/absen`
 6. Done
