@@ -17,9 +17,10 @@ app.get("/absen", async (req, res) => {
 		],
 	};
 
-	let browser = await puppeteer.launch(options);
 	try {
 		// open browser
+		let browser = await puppeteer.launch(options);
+
 		let page = await browser.newPage();
 
 		// open sipadung
@@ -88,8 +89,6 @@ app.get("/absen", async (req, res) => {
 	} catch (err) {
 		console.log("Absen Gagal, Manual aja, Jangan Males");
 		res.send("Absen Gagal, Manual aja, Jangan Males");
-	} finally {
-		await browser.close();
 	}
 });
 
