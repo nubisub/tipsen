@@ -15,7 +15,6 @@ app.get("/absen", async (req, res) => {
 			"--hide-scrollbars",
 			"--disable-web-security",
 		],
-		headless: false,
 	};
 
 	let browser = await puppeteer.launch(options);
