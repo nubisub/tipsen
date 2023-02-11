@@ -1,9 +1,9 @@
 name: tipsen
 on:
   schedule:
-    - cron: '* 2,3 * * *'
+    - cron: '0 2,3 * * *'
     - cron: '50 3 * * *'
-    - cron: '20 6,12 * * *'
+    - cron: '20 0,6 * * *'
     
 jobs:
   cron:
