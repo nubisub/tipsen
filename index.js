@@ -20,7 +20,6 @@ app.get("/absen", async (req, res) => {
 	try {
 		// open browser
 		let browser = await puppeteer.launch(options);
-
 		let page = await browser.newPage();
 
 		// open sipadung
@@ -57,7 +56,7 @@ app.get("/absen", async (req, res) => {
 			await page.click("button.mantine-1k5x82x");
 
 			let date = new Date();
-			let hour = date.getHours();
+			let hour = date.getHours() + 7;
 			let minute = date.getMinutes();
 			let second = date.getSeconds();
 			let day = date.getDate();
@@ -73,7 +72,7 @@ app.get("/absen", async (req, res) => {
 			});
 		} catch (error) {
 			let date = new Date();
-			let hour = date.getHours();
+			let hour = date.getHours() + 7;
 			let minute = date.getMinutes();
 			let second = date.getSeconds();
 			let day = date.getDate();
